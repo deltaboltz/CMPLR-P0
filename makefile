@@ -7,7 +7,7 @@ FIL1 := $(OBJ_DIR)/main.o
 SRC  := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ  := $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
-CC		 := g++ -std=c++11
+CC		   := g++
 CPPFLAGS := -Iinclude -MMD -MP
 CFLAGS 	 := -Wall -g
 
