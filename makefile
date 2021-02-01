@@ -15,7 +15,7 @@ CFLAGS 	 := -Wall -g
 
 all: $(EXE1)
 
-$(EXE1): $(filter-out $(FIL1), $(OBJ)) | $(BIN_DIR)
+$(EXE1): $(filter-out $(OBJ)) | $(BIN_DIR)
 	$(CC) $^ -o $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
