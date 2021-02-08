@@ -15,13 +15,13 @@ CFLAGS 	 := -Wall -g
 
 all: $(EXE1)
 
-$(EXE1): $(filter-out $(FIL2), $(OBJ)) | $(BIN_DIR)
+$(EXE1): $(filter-out $(FIL2), $(OBJ))
 	$(CC) $^ -o $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-$(BIN_DIR) $(OBJ_DIR):
+$(OBJ_DIR):
 	mkdir -p $@
 
 clean:
