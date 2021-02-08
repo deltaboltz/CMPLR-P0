@@ -28,7 +28,8 @@ clean:
 	@$(RM) -rv $(BIN_DIR) $(OBJ_DIR)
 
 cleanrun:
-	@$(RM) -rv $(BIN_DIR)/*.out $(BIN_DIR)/*.log tree.*
+	@$(RM) -rv $(BIN_DIR)/*.out $(BIN_DIR)/*.log
+	rm tree.*
 
 
 -include $(OBJ:.o=.d)
