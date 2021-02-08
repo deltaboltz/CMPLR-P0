@@ -2,7 +2,7 @@ SRC_DIR	:= src
 OBJ_DIR := obj
 BIN_DIR := bin
 
-EXE1 := $(BIN_DIR)/main
+EXE1 := main
 FIL1 := $(OBJ_DIR)/main.o
 SRC  := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ  := $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
