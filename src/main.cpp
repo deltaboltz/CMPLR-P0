@@ -10,12 +10,13 @@ int main(int argc, char* argv[])
   if (argc == 1)
   {
     buildBST(cin);
-    base = "tree";
+    base = "output";
   }
   else if (argc == 2)
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
+    base = filename;
     if (len > 4)
     {
       fext = filearg.substr(len-5, len);
