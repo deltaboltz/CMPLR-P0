@@ -59,14 +59,14 @@ void node<T>::inHelp(std::ostream& out, std::string indent)
 
   if (lchild != NULL)
   {
-    lchild -> inHelper(out, newdent);
+    lchild -> inHelp(out, newindent);
   }
 
   out << indent << toString();
 
   if (rchild != NULL)
   {
-    rchild -> inHelper(out, newdent);
+    rchild -> inHelp(out, newindent);
   }
 }
 
