@@ -26,7 +26,7 @@ $(OBJ_DIR):
 
 clean:
 	@$(RM) -rv $(BIN_DIR) $(OBJ_DIR)
-	rm output.*
+	rm *.inorder *.postorder *.preorder main
 
 cleanrun:
 	@$(RM) -rv $(BIN_DIR)/*.out $(BIN_DIR)/*.log
