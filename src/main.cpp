@@ -1,7 +1,12 @@
+/*
+* Created By : Connor Schultz
+* Date Created : 2/3/2021
+* Last Date Edited : 2/8/2021
+*/
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "tree.h"
+#include "tree.h" //
 using namespace std;
 int main(int argc, char* argv[])
 {
@@ -9,13 +14,12 @@ int main(int argc, char* argv[])
 
   if (argc == 1)
   {
-    buildBST(cin);
+    buildTree(cin);
   }
   else if (argc != 1)
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
-    cout << "Line 18" << endl;
 
 
     if (len > 4)
@@ -36,7 +40,7 @@ int main(int argc, char* argv[])
     if (fs)
     {
       base = filearg.substr(0, len-7);
-      buildBST(fs);
+      buildTree(fs);
     }
     else
     {
@@ -50,9 +54,9 @@ int main(int argc, char* argv[])
     return 1;
   }
 
-  printIn(base);
-  printPre(base);
-  printPost(base);
+  printInorder(base);
+  printPreorder(base);
+  printPostorder(base);
 
   return 0;
 }

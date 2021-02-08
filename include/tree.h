@@ -3,8 +3,8 @@
 
 void buildBST(std::istream& in);
 
-void printIn(std::string base);
-void printPre(std::string base);
-void printPost(std::string base);
+void printInorder(std::string base);
+void printPreorder(std::string base);
+void printPostorder(std::string base);
 
 #endif

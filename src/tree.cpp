@@ -7,7 +7,7 @@
 
 static node<std::string> root;
 
-void buildBST(std::istream& in)
+void buildTree(std::istream& in)
 {
   std::string word;
 
@@ -18,7 +18,7 @@ void buildBST(std::istream& in)
 
 }
 
-void printIn(std::string base)
+void printInorder(std::string base)
 {
   std::ofstream ofs;
   std::string a = base + ".inorder";
@@ -26,10 +26,10 @@ void printIn(std::string base)
   ofs.open(a.c_str());
   root.inOrder(ofs);
   ofs.close();
-  
+
 }
 
-void printPre(std::string base)
+void printPreorder(std::string base)
 {
   std::ofstream ofs;
   std::string a = base + ".preorder";
@@ -40,7 +40,7 @@ void printPre(std::string base)
 
 }
 
-void printPost(std::string base)
+void printPostorder(std::string base)
 {
   std::ofstream ofs;
   std::string a = base + ".postorder";
