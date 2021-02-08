@@ -55,7 +55,7 @@ template <class T>
 void node<T>::inHelp(std::ostream& out, std::string indent)
 {
   std::string newindent("      ");
-  newdent += indent;
+  newindent += indent;
 
   if (lchild != NULL)
   {
@@ -73,16 +73,16 @@ void node<T>::inHelp(std::ostream& out, std::string indent)
 template <class T>
 void node<T>::postHelp(std::ostream& out, std::string indent)
 {
-  std::string newindent("      ")
-  newdent += indent;
+  std::string newindent("      ");
+  newindent += indent;
   if (lchild != NULL)
   {
-    lchild -> postHelper(out, newindent);
+    lchild -> postHelp(out, newindent);
   }
 
   if (rchild != NULL)
   {
-    rchild -> postHelper(out, newindent);
+    rchild -> postHelp(out, newindent);
   }
 
   out << indent << toString();
@@ -126,7 +126,7 @@ void node<T>::insert(T key, T item)
   {
     if(keyT == key)
     {
-      data.insert(item);
+      dataT.insert(item);
     }
 
     else if(keyT > key)
@@ -164,7 +164,7 @@ void node<T>::preOrder()
 }
 
 template <class T>
-void node<T>preOrder(std::ostream& out)
+void node<T>::preOrder(std::ostream& out)
 {
   preHelp(out, "");
 }
@@ -175,7 +175,7 @@ void node<T>::inOrder()
   inHelp(std::cout, "");
 }
 
-tempalte <class T>
+template <class T>
 void node<T>::inOrder(std::ostream& out)
 {
   inHelp(out, "");
