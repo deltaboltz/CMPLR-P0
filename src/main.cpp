@@ -49,7 +49,10 @@ int main(int argc, char* argv[])
     return 1;
   }
 
-
+  if(filearg)
+  {
+    base = filearg.substr(0,len-7);
+  }
   printIn(base);
   printPre(base);
   printPost(base);
