@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include "tree.h"
-
+using namespace std;
 int main(int argc, char* argv[])
 {
   std::string base;
