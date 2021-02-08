@@ -7,11 +7,11 @@ int main(int argc, char* argv[])
 {
   std::string base = "output";
 
-  if (argc == 0)
+  if (argc == 1)
   {
     buildBST(cin);
   }
-  else if (argc == 1)
+  else if (argc == 2)
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
