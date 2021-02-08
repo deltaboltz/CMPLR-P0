@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
-    base = filerarg.substr(0, len-7);
+    base = filearg.substr(0, len-7);
 
     if (len > 4)
     {
