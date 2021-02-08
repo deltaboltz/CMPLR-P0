@@ -16,13 +16,13 @@ int main(int argc, char* argv[])
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
+
     if (len > 4)
     {
-      fext = filearg.substr(len-5, len);
+      fext = filearg.substr(len-7, len);
       if (fext == ".sp2021")
       {
           filename = filearg;
-          base = filearg;
       }
     }
 
@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
     if (fs)
     {
       buildBST(fs);
-      base = filename.substr(0, filename.length()-5);
+      base = filename.substr(0, filename.length()-7);
     }
     else
     {
