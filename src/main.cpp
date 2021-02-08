@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
     if (len > 4)
     {
       fext = filearg.substr(len-5, len);
-      if (fext == ".sp21")
+      if (fext == ".sp2021")
       {
           filename = filearg;
       }
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 
     if (filename == "")
     {
-        filename = filearg + ".sp21";
+        filename = filearg + ".sp2021";
     }
 
     std::ifstream fs(filename.c_str());
