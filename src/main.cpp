@@ -5,7 +5,7 @@
 using namespace std;
 int main(int argc, char* argv[])
 {
-  std::string base = "output";
+  std::string base = "gooby";
 
   if (argc == 1)
   {
