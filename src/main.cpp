@@ -6,25 +6,26 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "tree.h" //
+
+#include "tree.h" //buildTree() , printInorder(), printPreorder(), printPostorder()
+
 using namespace std;
 int main(int argc, char* argv[])
 {
   std::string base = "output";
 
-  if (argc == 1)
+  if (argc == 1) //No filename given at all, read from keyboard input until CTRL+D is pressed
   {
     buildTree(cin);
   }
-  else if (argc != 1)
+  else if (argc == 2) //Filename is given, build the tree from already typed words until EOF is reached
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
 
-
     if (len > 4)
     {
-      fext = filearg.substr(len-7, len);
+      fext = filearg.substr(len-7, len); //check to see if we have the proper file extension
       if (fext == ".sp2021")
       {
           filename = filearg;
@@ -39,7 +40,7 @@ int main(int argc, char* argv[])
     std::ifstream fs(filename.c_str());
     if (fs)
     {
-      base = filearg.substr(0, len-7);
+      base = filearg.substr(0, len-7); //Set the file output names to be the filename of the input
       buildTree(fs);
     }
     else

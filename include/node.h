@@ -124,11 +124,14 @@ void node<T>::insert(T key, T item)
 {
   if(set)
   {
+    //if the key matches a already made key then add item to the set
     if(keyT == key)
     {
       dataT.insert(item);
     }
 
+
+    //else we will recursively call to create new nodes until we reach the node we need
     else if(keyT > key)
     {
       if(lchild == NULL)
@@ -149,7 +152,7 @@ void node<T>::insert(T key, T item)
     }
   }
 
-  else
+  else //only occurs when data is first being put into the node, then we set the insert key (keyT)
   {
     set = true;
     keyT = key;
@@ -157,6 +160,8 @@ void node<T>::insert(T key, T item)
   }
 }
 
+// Each traversal has a standard cout stream as well as an
+// overloaded function for ostream
 template <class T>
 void node<T>::preOrder()
 {

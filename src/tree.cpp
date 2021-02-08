@@ -2,8 +2,8 @@
 #include <string>
 #include <fstream>
 
-#include "node.h"
-#include "tree.h"
+#include "node.h" //inOrder() , preOrder() , postOrder()
+#include "tree.h" //Prototypes for function definitions in this class
 
 static node<std::string> root;
 
