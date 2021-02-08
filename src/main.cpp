@@ -5,7 +5,7 @@
 using namespace std;
 int main(int argc, char* argv[])
 {
-  std::string base = "gooby";
+  std::string base = "output";
 
   if (argc == 1)
   {
@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
-    base = filearg.substr(0, len-7);
+
 
     if (len > 4)
     {
@@ -34,6 +34,7 @@ int main(int argc, char* argv[])
     std::ifstream fs(filename.c_str());
     if (fs)
     {
+      base = filearg.substr(0, len-7);
       buildBST(fs);
     }
     else
