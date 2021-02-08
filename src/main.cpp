@@ -16,6 +16,7 @@ int main(int argc, char* argv[])
   {
     std::string fext, filename(""), filearg(argv[1]);
     int len = filearg.length();
+    base = filerarg.substr(0, len-7);
 
     if (len > 4)
     {
@@ -35,7 +36,6 @@ int main(int argc, char* argv[])
     if (fs)
     {
       buildBST(fs);
-      base = "test12332131";
     }
     else
     {
