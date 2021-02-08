@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 
   if (argc == 1)
   {
-    buildTree(cin);
+    buildBST(cin);
     base = "tree";
   }
   else if (argc == 2)
@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
     std::ifstream fs(filename.c_str());
     if (fs)
     {
-      buildTree(fs);
+      buildBST(fs);
       base = filename.substr(0, filename.length()-5);
     }
     else
