@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
     if (fs)
     {
       buildBST(fs);
-      base = filename.substr(0, len-7);
+      base = "test12332131";
     }
     else
     {
