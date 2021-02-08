@@ -5,12 +5,11 @@
 using namespace std;
 int main(int argc, char* argv[])
 {
-  std::string base;
+  std::string base = "output";
 
   if (argc == 1)
   {
     buildBST(cin);
-    base = "output";
   }
   else if (argc == 2)
   {
