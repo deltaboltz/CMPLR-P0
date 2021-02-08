@@ -26,7 +26,6 @@ $(OBJ_DIR):
 
 clean:
 	@$(RM) -rv $(BIN_DIR) $(OBJ_DIR)
-	del /Q /S *.o
 
 cleanrun:
 	@$(RM) -rv $(BIN_DIR)/*.out $(BIN_DIR)/*.log
