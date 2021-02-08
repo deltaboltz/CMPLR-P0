@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
       if (fext == ".sp2021")
       {
           filename = filearg;
-          base = filename;
+          base = filearg;
       }
     }
 
