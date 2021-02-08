@@ -192,3 +192,5 @@ void node<T>::postOrder(std::ostream& out)
 {
   postHelp(out, "");
 }
+
+#endif
