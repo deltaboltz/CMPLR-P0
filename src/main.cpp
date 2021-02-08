@@ -22,13 +22,13 @@ int main(int argc, char* argv[])
       if (fext == ".sp2021")
       {
           filename = filearg;
+          base = filename;
       }
     }
 
     if (filename == "")
     {
         filename = filearg + ".sp2021";
-        base = filename;
     }
 
     std::ifstream fs(filename.c_str());
