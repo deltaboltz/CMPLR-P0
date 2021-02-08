@@ -21,9 +21,6 @@ $(EXE1): $(filter-out $(FIL2), $(OBJ)) | $(BIN_DIR)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
 
-$(BIN_DIR) $(OBJ_DIR):
-	mkdir -p $@
-
 clean:
 	@$(RM) -rv $(BIN_DIR) $(OBJ_DIR)
 

@@ -5,5 +5,53 @@
 
 int main(int argc, char* argv[])
 {
-  std::cout << "Hello World" << std::endl;
+  std::string base;
+
+  if (argc == 1)
+  {
+    buildTree(cin);
+    base = "tree";
+  }
+  else if (argc == 2)
+  {
+    std::string fext, filename(""), filearg(argv[1]);
+    int len = filearg.length();
+    if (len > 4)
+    {
+      fext = filearg.substr(len-5, len);
+      if (fext == ".sp21")
+      {
+          filename = filearg;
+      }
+    }
+
+    if (filename == "")
+    {
+        filename = filearg + ".sp21";
+    }
+
+    std::ifstream fs(filename.c_str());
+    if (fs)
+    {
+      buildTree(fs);
+      base = filename.substr(0, filename.length()-5);
+    }
+    else
+    {
+      cout << "The file '" << filename << "' cannot be opened. Terminating.\n";
+      return 2;
+    }
+  }
+  else
+  {
+    cout << "An incorrect number of arguments was provided. Terminating.\n";
+    return 1;
+  }
+
+
+  printIn(base);
+  printPre(base);
+  printPost(base);
+
+  return 0;
 }
